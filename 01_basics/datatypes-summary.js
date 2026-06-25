@@ -32,4 +32,31 @@ const myFunction = function(){
 }
 console.log(typeof myFunction);
 
+//*********************************************************************** */
+//stack(primitive) jb bhi stack memory use hoti hai
+//  eska mtlb ye h jo bhi apne variable declare kiya uska copy milti hai
+
+// , Heap(non primitive)
+// jb bhi koi memory heap ke under defined hoti h 
+// to wha se reference milta h original value ka 
+
+//example
+let myName = "Nitish"
+
+let anotherName = myName
+anotherName = "Raaj"
+console.log( myName);
+console.log(anotherName);
+
+let userOne = {
+
+email:"user@goggle.com",
+upi: "user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "Nitish@goggle.com"
+console.log(userOne.email);
+console.log(userTwo.email);
+
 
