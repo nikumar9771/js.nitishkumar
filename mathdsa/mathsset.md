@@ -260,3 +260,26 @@ int main(){
     cout<<sum<<endl;
     return 0;
 }
+
+```Q vehicle with an odd last digit may travel on odd dates and those with an even last digit on even dates . given the last digits of N vehicles, a dates D and a fine X, print the total fine collected from violators
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,d,x;
+    cin>>n>>d>>x;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    int totalFine = 0;
+    for(int  i=0; i<n; i++){
+        if(arr[i]%2 != d%2){
+            totalFine = totalFine + x;
+        }
+    }
+  cout<<totalFine<<endl;
+    return 0;
+}
+
+
